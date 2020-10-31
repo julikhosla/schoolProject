@@ -1,0 +1,29 @@
+<table class="table table-bordered">
+  <thead>
+    <tr class="headerTitle">
+      <th colspan="7">
+        <h2 class="text-center">{{ headerTitle | uppercase }}</h2>
+      </th>
+    </tr>
+    <tr class="tbodyColor">
+      <th scope="col">Sr No</th>
+      <th scope="col">Student Name</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Subject1_current_year_marks</th>
+      <th scope="col">Subject1_previous_year_marks</th>
+      <th scope="col">Subject2_current_year_marks</th>
+      <th scope="col">Subject2_previous_year_marks</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="studentDetails?.length > 0" class="tbodyColor">
+    <tr *ngFor="let item of studentDetails">
+      <th scope="row">{{ item.student_id }}</th>
+      <td>{{ item.student_name }}</td>
+      <td>{{ item.gender }}</td>
+      <td>{{ item.subject1_mark_current_year }}</td>
+      <td>{{ item.subject1_mark_previous_year }}</td>
+      <td>{{ item.subject2_mark_current_year }}</td>
+      <td>{{ item.subject1_mark_previous_year }}</td>
+    </tr>
+  </tbody>
+</table>

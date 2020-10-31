@@ -1,22 +1,17 @@
-import { AddTutorialComponent } from './components/add-tutorial/add-tutorial.component';
-import { TutorialDetailsComponent } from './components/tutorial-details/tutorial-details.component';
-import { TutorialsListComponent } from './components/tutorials-list/tutorials-list.component';
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { SchoolClassGradeComponent } from './components/school-classgrade/school-classgrade.component';
 
 
 const routes: Routes = [
   {
-    path:'', redirectTo:'tutorials', pathMatch:'full'
+    path: '', redirectTo: 'home', pathMatch: 'full'
   },
   {
-    path:'tutorials', component:TutorialsListComponent
+    path: 'home', component: SchoolClassGradeComponent
   },
   {
-    path:'tutorials/:id',component:TutorialDetailsComponent
-  },
-  {
-    path:'add',component:AddTutorialComponent
+    path: '**', component: SchoolClassGradeComponent
   }
 ];
 

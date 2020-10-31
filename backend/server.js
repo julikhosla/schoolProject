@@ -35,7 +35,7 @@ useUnifiedTopology:true
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to juli todolist application." });
 });
-require("./config/routes/tutorial.routes")(app);
+require("./config/routes/student.routes")(app);
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {

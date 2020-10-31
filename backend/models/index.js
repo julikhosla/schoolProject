@@ -4,5 +4,5 @@ mongoose.Promise=global.Promise;
 const db={};
 db.mongoose=mongoose;
 db.url=dbConfig.url;
-db.tutorials=require('./tutorial.model')(mongoose);
+db.student=require('./student.model')(mongoose);
 module.exports=db;

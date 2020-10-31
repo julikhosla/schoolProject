@@ -1,12 +1,12 @@
 {
-  "name": "todolistcrud",
+  "name": "schoolselection",
   "version": "0.0.0",
   "engines": {
     "node": "12.16.3"
   },
   "scripts": {
     "ng": "ng",
-    "start": "node backend/server.js",
+    "start": "ng serve",
     "build": "ng build",
     "heroku-postbuild": "ng build --prod",
     "test": "ng test",
